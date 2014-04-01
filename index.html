@@ -52,7 +52,7 @@ $(document).bind('pageinit', function() {
     var q = $("#text1").val();
     alert("Click "+q);
     var jsonUrl = 
-"http://gentle-escarpment-3329.herokuapp.com/quote/"+q;
+"http://blooming-cliffs-4489.herokuapp.com/"+q;
     alert("Fetching result from "+jsonUrl);
     $.get(jsonUrl, function(data) {
       alert(data.author);
@@ -64,7 +64,7 @@ $(document).bind('pageinit', function() {
 
   $( "#button2" ).bind( "click", function(event, ui) {
     alert("Posting a new quote");
-    var jsonUrl = "http://gentle-escarpment-3329.herokuapp.com/quote";
+    var jsonUrl = "http://blooming-cliffs-4489.herokuapp.com/";
     var newQuote = { "author" : "foo", "text" : "some text" };
     $.post(jsonUrl,newQuote, function(data) {
       alert("Added quote number " + data.pos + " " + data.author + " " + 
